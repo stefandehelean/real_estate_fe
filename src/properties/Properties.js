@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import propertiesActions from './Properties.actions';
-import loginActions from '../login/Login.actions';
-import { history } from '../utils/_History';
 import NavBar from '../navBar/NavBar';
 import Filter from './components/Filter';
 import Property from './components/Property';
@@ -61,7 +59,7 @@ function Properties() {
 
   useEffect(() => {
     dispatch(propertiesActions.getAll());
-  }, []);
+  }, [dispatch]);
 
   return (
     <React.Fragment>

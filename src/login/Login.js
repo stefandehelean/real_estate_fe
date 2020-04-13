@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { config } from '../config/config';
 import * as queryString from 'query-string';
-import { history } from '../utils/_History';
 
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';

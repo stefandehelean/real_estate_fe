@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import NavBar from '../navBar/NavBar';
@@ -65,7 +65,7 @@ function PropertyDetails() {
 
   useEffect(() => {
     dispatch(propertyDetailsActions.getById(id));
-  }, [dispatch]);
+  }, [dispatch, id]);
 
   function handleBack() {
     history.push(`/`);
@@ -130,7 +130,7 @@ function PropertyDetails() {
                     <GridList className={classes.gridList} cols={3.5} rows={2}>
                       {propertyData.item.images.map((url, index) => (
                         <GridListTile key={index} rows={2}>
-                          <img src={url} />
+                          <img src={url} alt=""/>
                         </GridListTile>
                       ))}
                     </GridList>

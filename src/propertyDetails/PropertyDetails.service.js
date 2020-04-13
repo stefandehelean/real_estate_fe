@@ -1,7 +1,6 @@
 import { authHeader } from '../utils/AuthHeader';
 import {config} from '../config/config';
 import loginService from '../login/Login.service';
-import * as queryString from 'query-string';
 
 const PropertyDetailsService = {
   getById
