@@ -49,7 +49,7 @@ function Login() {
 
   const stringifiedParams = queryString.stringify({
     client_id: config.fbAppId,
-    redirect_uri: 'http://localhost:3000/facebookauth',
+    redirect_uri: config.fbRedirectURL,
     scope: ['email', 'user_friends'].join(','),
     response_type: 'code',
     auth_type: 'rerequest',
